@@ -1,0 +1,16 @@
+/**
+ * Dependències externes (node_modules)
+ *
+ * - Font Awesome Free: icones (només l'estil "solid").
+ * - Fontsource: tipografies Lora i Special Elite servides des del propi projecte.
+ */
+
+@use "@fortawesome/fontawesome-free/scss/variables" with (
+  $font-path: "npm:@fortawesome/fontawesome-free/webfonts"
+);
+@use "@fortawesome/fontawesome-free/scss/fontawesome";
+@use "@fortawesome/fontawesome-free/scss/solid";
+@import "npm:@fontsource/lora/latin-400.css";
+@import "npm:@fontsource/lora/latin-400-italic.css";
+@import "npm:@fontsource/lora/latin-700.css";
+@import "npm:@fontsource/special-elite/latin-400.css";

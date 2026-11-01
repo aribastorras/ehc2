@@ -1,0 +1,39 @@
+/** @define c-button */
+
+@use "../settings";
+@use "../tools";
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  gap: tools.spacing(2);
+  padding: tools.spacing(3) tools.spacing(4);
+  border: 2px solid settings.$mile-green;
+  font-size: tools.font-size("sm");
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: settings.$green-900;
+  background-color: settings.$mile-green;
+  border-radius: settings.$radius;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: tools.tint(settings.$mile-green, 30%);
+  }
+
+  &:focus-visible {
+    @include tools.focus-ring(settings.$paper);
+  }
+
+  &--ghost {
+    color: settings.$paper;
+    background-color: transparent;
+
+    &:hover {
+      color: settings.$green-900;
+      background-color: settings.$mile-green;
+    }
+  }
+}

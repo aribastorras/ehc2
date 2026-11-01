@@ -1,0 +1,378 @@
+<!doctype html>
+
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Per què has de llegir La milla verda, la novel·la de Stephen King publicada el 1996: sinopsi, personatges, publicació per entregues i fitxa del llibre."
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>La milla verda | Stephen King</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main id="inici">
+      <section class="c-hero" aria-labelledby="titol">
+        <div class="o-container c-hero__inner">
+          <div>
+            <p class="c-hero__kicker">Recomanació de lectura · Stephen King</p>
+            <h1 class="c-hero__title" id="titol">La milla verda</h1>
+            <p class="c-hero__lead">
+              Un passadís de linòleum verd, una presó de Louisiana el 1932 i un
+              presoner gegant que guarda un secret. Una de les històries més
+              humanes del mestre del terror.
+            </p>
+            <div class="c-hero__actions">
+              <a class="c-button" href="#sinopsi">
+                <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                Descobreix la història
+              </a>
+              <a class="c-button c-button--ghost" href="#per-que">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                Per què llegir-la
+              </a>
+            </div>
+          </div>
+          <picture class="c-hero__cover">
+            <source
+              srcset="
+                ./assets/images/green_mile.jpg?as=webp&width=330 330w,
+                ./assets/images/green_mile.jpg?as=webp&width=658 658w
+              "
+              sizes="(min-width: 480px) 300px, 100vw"
+              type="image/webp"
+            />
+            <img
+              class="c-hero__cover-image"
+              src="./assets/images/green_mile.jpg?width=658"
+              srcset="
+                ./assets/images/green_mile.jpg?width=330 330w,
+                ./assets/images/green_mile.jpg?width=658 658w
+              "
+              sizes="(min-width: 480px) 300px, 100vw"
+              alt="Portada de La milla verde, de Stephen King (edició de Debolsillo): una cadira elèctrica il·luminada amb llum verda i un ratolí al braç."
+              width="658"
+              height="1000"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="c-section" id="sinopsi" aria-labelledby="sinopsi-titol">
+        <div class="o-container o-container--narrow">
+          <header class="c-section__header">
+            <p class="c-section__eyebrow">
+              <i class="fa-solid fa-scroll" aria-hidden="true"></i>
+              Sinopsi
+            </p>
+            <h2 id="sinopsi-titol">Tot comença al bloc E</h2>
+          </header>
+          <div class="o-stack c-section__text">
+            <p>
+              L'any 1932, en plena Gran Depressió,
+              <strong>Paul Edgecombe</strong> és el cap de guàrdies del bloc E
+              de la presó de Cold Mountain, a Louisiana: el corredor de la mort.
+              Els presos l'anomenen <em>la milla verda</em> pel color del
+              linòleum que cobreix el terra del passadís que porta fins a la
+              cadira elèctrica.
+            </p>
+            <p>
+              Un dia hi arriba <strong>John Coffey</strong>, un home enorme,
+              tímid i amb por de la foscor, condemnat per l'assassinat de dues
+              nenes. Ben aviat, Paul i els seus companys comencen a sospitar que
+              Coffey no és el que sembla, i que té un do que ningú no sap
+              explicar.
+            </p>
+            <p>
+              Dècades més tard, des d'una residència per a gent gran, un Paul ja
+              molt vell escriu els records d'aquell estiu que li va canviar la
+              vida per sempre.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="c-section c-section--alt"
+        id="personatges"
+        aria-labelledby="personatges-titol"
+      >
+        <div class="o-container">
+          <header class="c-section__header">
+            <p class="c-section__eyebrow">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              Personatges
+            </p>
+            <h2 id="personatges-titol">Els habitants de la milla</h2>
+          </header>
+          <ul class="o-grid o-grid--3">
+            <li>
+              <article class="c-character-card">
+                <span class="c-character-card__icon" aria-hidden="true">
+                  <i class="fa-solid fa-user-shield"></i>
+                </span>
+                <h3>Paul Edgecombe</h3>
+                <p class="c-character-card__role">Narrador i cap de guàrdies</p>
+                <p>
+                  Just i compassiu, tracta els condemnats amb dignitat fins al
+                  final. És qui ens explica la història.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="c-character-card c-character-card--highlight">
+                <span class="c-character-card__icon" aria-hidden="true">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </span>
+                <h3>John Coffey</h3>
+                <p class="c-character-card__role">Presoner condemnat a mort</p>
+                <p>
+                  Un gegant d'ànima innocent. «Com la beguda, però no s'escriu
+                  igual», repeteix quan diu el seu nom.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="c-character-card c-character-card--villain">
+                <span class="c-character-card__icon" aria-hidden="true">
+                  <i class="fa-solid fa-user-tie"></i>
+                </span>
+                <h3>Percy Wetmore</h3>
+                <p class="c-character-card__role">Guàrdia</p>
+                <p>
+                  Cruel i covard, es creu intocable gràcies als seus contactes
+                  polítics. Tot el bloc E el detesta.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="c-character-card">
+                <span class="c-character-card__icon" aria-hidden="true">
+                  <i class="fa-solid fa-paw"></i>
+                </span>
+                <h3>Eduard Delacroix i el Sr. Jingles</h3>
+                <p class="c-character-card__role">Presoner i el seu ratolí</p>
+                <p>
+                  Un pres que ensinistra un ratolí sorprenentment llest. La seva
+                  amistat és un dels fils més tendres del llibre.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="c-character-card">
+                <span class="c-character-card__icon" aria-hidden="true">
+                  <i class="fa-solid fa-people-group"></i>
+                </span>
+                <h3>Brutus Howell</h3>
+                <p class="c-character-card__role">Guàrdia</p>
+                <p>
+                  Malgrat el sobrenom, és l'home de confiança de Paul: gran,
+                  noble i amb un gran sentit de l'humor.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="c-character-card c-character-card--villain">
+                <span class="c-character-card__icon" aria-hidden="true">
+                  <i class="fa-solid fa-skull"></i>
+                </span>
+                <h3>William «Wild Bill» Wharton</h3>
+                <p class="c-character-card__role">Presoner</p>
+                <p>
+                  Violent i imprevisible, arriba a la milla disposat a fer la
+                  vida impossible a guàrdies i presos.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="c-section c-section--dark" aria-label="Cita del llibre">
+        <div class="o-container o-container--narrow">
+          <figure class="c-quote">
+            <i
+              class="fa-solid fa-quote-left c-quote__icon"
+              aria-hidden="true"
+            ></i>
+            <blockquote class="c-quote__text">
+              <p>
+                Tots devem una mort, no hi ha excepcions; però, Déu meu, de
+                vegades la milla verda es fa tan llarga…
+              </p>
+            </blockquote>
+            <figcaption class="c-quote__source">
+              Paul Edgecombe, a <cite>La milla verda</cite> (traducció pròpia)
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="c-section" id="per-que" aria-labelledby="per-que-titol">
+        <div class="o-container">
+          <header class="c-section__header">
+            <p class="c-section__eyebrow">
+              <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              Per què llegir-la
+            </p>
+            <h2 id="per-que-titol">Quatre raons per recórrer la milla</h2>
+          </header>
+          <ul class="o-grid o-grid--2">
+            <li class="c-reason">
+              <span class="c-reason__icon" aria-hidden="true">
+                <i class="fa-solid fa-ghost"></i>
+              </span>
+              <div>
+                <h3 class="c-reason__title">King més enllà del terror</h3>
+                <p>
+                  Hi ha elements sobrenaturals, però el que realment colpeix és
+                  la bondat, la culpa i la injustícia. Ideal si creus que King
+                  «no és per a tu».
+                </p>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__icon" aria-hidden="true">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </span>
+              <div>
+                <h3 class="c-reason__title">Una reflexió sobre la justícia</h3>
+                <p>
+                  Planteja preguntes incòmodes sobre la pena de mort, el racisme
+                  i el poder, sense sermons i a través dels personatges.
+                </p>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__icon" aria-hidden="true">
+                <i class="fa-solid fa-feather-pointed"></i>
+              </span>
+              <div>
+                <h3 class="c-reason__title">Una veu narrativa inoblidable</h3>
+                <p>
+                  La mirada del vell Paul, que alterna el passat i el present,
+                  dona a la història un to íntim i nostàlgic.
+                </p>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__icon" aria-hidden="true">
+                <i class="fa-solid fa-film"></i>
+              </span>
+              <div>
+                <h3 class="c-reason__title">Un clàssic també al cinema</h3>
+                <p>
+                  El 1999 Frank Darabont la va adaptar amb Tom Hanks i Michael
+                  Clarke Duncan. Llegeix el llibre primer i després mira la
+                  pel·lícula.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="c-section c-section--alt"
+        id="publicacio"
+        aria-labelledby="publicacio-titol"
+      >
+        <div class="o-container o-container--narrow">
+          <header class="c-section__header">
+            <p class="c-section__eyebrow">
+              <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+              Publicació
+            </p>
+            <h2 id="publicacio-titol">Una novel·la per entregues</h2>
+          </header>
+          <div class="o-stack o-stack--loose">
+            <p class="c-section__text">
+              Inspirant-se en Charles Dickens, King va publicar la novel·la el
+              1996 en sis fascicles mensuals. Els lectors havien d'esperar cada
+              mes per saber com continuava la història.
+            </p>
+            <ol class="c-timeline">
+              <li class="c-timeline__item">
+                <h3>Les dues nenes mortes</h3>
+                <p class="c-timeline__original">The Two Dead Girls</p>
+                <p class="c-timeline__date">Març de 1996</p>
+              </li>
+              <li class="c-timeline__item">
+                <h3>El ratolí de la milla</h3>
+                <p class="c-timeline__original">The Mouse on the Mile</p>
+                <p class="c-timeline__date">Abril de 1996</p>
+              </li>
+              <li class="c-timeline__item">
+                <h3>Les mans d'en Coffey</h3>
+                <p class="c-timeline__original">Coffey's Hands</p>
+                <p class="c-timeline__date">Maig de 1996</p>
+              </li>
+              <li class="c-timeline__item">
+                <h3>La mala mort d'Eduard Delacroix</h3>
+                <p class="c-timeline__original">
+                  The Bad Death of Eduard Delacroix
+                </p>
+                <p class="c-timeline__date">Juny de 1996</p>
+              </li>
+              <li class="c-timeline__item">
+                <h3>Viatge nocturn</h3>
+                <p class="c-timeline__original">Night Journey</p>
+                <p class="c-timeline__date">Juliol de 1996</p>
+              </li>
+              <li class="c-timeline__item">
+                <h3>Coffey a la milla</h3>
+                <p class="c-timeline__original">Coffey on the Mile</p>
+                <p class="c-timeline__date">Agost de 1996</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-section" id="fitxa" aria-labelledby="fitxa-titol">
+        <div class="o-container o-container--narrow">
+          <header class="c-section__header">
+            <p class="c-section__eyebrow">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              Fitxa
+            </p>
+            <h2 id="fitxa-titol">Fitxa del llibre</h2>
+          </header>
+          <dl class="c-fact-sheet">
+            <dt class="c-fact-sheet__term">Autor</dt>
+            <dd class="c-fact-sheet__value">Stephen King</dd>
+            <dt class="c-fact-sheet__term">Títol original</dt>
+            <dd class="c-fact-sheet__value">The Green Mile</dd>
+            <dt class="c-fact-sheet__term">Any</dt>
+            <dd class="c-fact-sheet__value">1996</dd>
+            <dt class="c-fact-sheet__term">Gènere</dt>
+            <dd class="c-fact-sheet__value">
+              Drama, fantasia, novel·la carcerària
+            </dd>
+            <dt class="c-fact-sheet__term">Ambientació</dt>
+            <dd class="c-fact-sheet__value">
+              Penitenciari de Cold Mountain, Louisiana, 1932
+            </dd>
+            <dt class="c-fact-sheet__term">Premis</dt>
+            <dd class="c-fact-sheet__value">
+              Premi Bram Stoker a la millor novel·la (1996)
+            </dd>
+            <dt class="c-fact-sheet__term">Adaptació</dt>
+            <dd class="c-fact-sheet__value">
+              <em>The Green Mile</em> (1999), de Frank Darabont, amb quatre
+              nominacions als Oscar
+            </dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>

@@ -1,0 +1,35 @@
+/** @define c-quote */
+
+@use "../settings";
+@use "../tools";
+
+.c-quote {
+  position: relative;
+  padding-left: tools.spacing(5);
+  border-left: 4px solid settings.$mile-green;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: tools.spacing(3) * -1;
+    padding-block: tools.spacing(1);
+    font-size: tools.font-size("md");
+    color: settings.$mile-green;
+    background-color: settings.$green-900;
+  }
+
+  &__text {
+    margin-bottom: tools.spacing(3);
+    font-size: tools.font-size("md");
+    font-style: italic;
+
+    @include tools.mq("md") {
+      font-size: tools.font-size("lg");
+    }
+  }
+
+  &__source {
+    font-size: tools.font-size("sm");
+    color: tools.tint(settings.$green-900, 70%);
+  }
+}

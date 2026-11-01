@@ -1,0 +1,25 @@
+/** @define c-reason */
+
+@use "../settings";
+@use "../tools";
+
+.c-reason {
+  display: grid;
+  align-items: start;
+  gap: tools.spacing(3);
+  grid-template-columns: auto 1fr;
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: tools.rem(40px);
+    height: tools.rem(40px);
+    color: settings.$green-900;
+    background-color: settings.$mile-green;
+    border-radius: settings.$radius;
+  }
+
+  &__title {
+    margin-bottom: tools.spacing(1);
+  }
+}

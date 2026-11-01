@@ -1,0 +1,54 @@
+/**
+ * Punt d'entrada dels estils.
+ * Només importa parcials, ordenats segons les capes d'ITCSS
+ * (de menys a més especificitat). No hi escriguis estils.
+ */
+
+/**
+ * Dependències externes
+ */
+@use "dependencies";
+
+/**
+ * 1. Settings i 2. Tools no generen CSS: cada parcial els carrega amb @use.
+ */
+
+/**
+ * 3. Generic
+ */
+@use "generic/box-sizing";
+@use "generic/reset";
+
+/**
+ * 4. Elements
+ */
+@use "elements/page";
+@use "elements/headings";
+@use "elements/links";
+
+/**
+ * 5. Objects
+ */
+@use "objects/container";
+@use "objects/grid";
+@use "objects/stack";
+
+/**
+ * 6. Components
+ */
+@use "components/site-header";
+@use "components/hero";
+@use "components/section";
+@use "components/character-card";
+@use "components/quote";
+@use "components/reason";
+@use "components/timeline";
+@use "components/fact-sheet";
+@use "components/button";
+@use "components/site-footer";
+
+/**
+ * 7. Utilities
+ */
+@use "utilities/visually-hidden";
+@use "utilities/text";

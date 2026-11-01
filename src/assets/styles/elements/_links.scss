@@ -1,0 +1,16 @@
+@use "../settings";
+@use "../tools";
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  color: inherit;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  &:focus-visible {
+    @include tools.focus-ring;
+  }
+}

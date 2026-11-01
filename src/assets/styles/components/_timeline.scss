@@ -1,0 +1,45 @@
+/** @define c-timeline */
+
+@use "../settings";
+@use "../tools";
+
+.c-timeline {
+  counter-reset: part;
+  border-left: 2px dashed settings.$green-500;
+  margin-left: tools.spacing(4);
+
+  &__item {
+    position: relative;
+    counter-increment: part;
+    padding: 0 0 tools.spacing(4) tools.spacing(5);
+
+    &::before {
+      content: counter(part);
+      position: absolute;
+      top: 0;
+      left: tools.rem(-17px);
+      display: grid;
+      place-items: center;
+      width: tools.rem(32px);
+      height: tools.rem(32px);
+      font-family: settings.$font-family-display;
+      color: settings.$paper;
+      background-color: settings.$green-700;
+      border-radius: 50%;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__date {
+    font-size: tools.font-size("sm");
+    color: settings.$steel;
+  }
+
+  &__original {
+    font-size: tools.font-size("sm");
+    font-style: italic;
+  }
+}

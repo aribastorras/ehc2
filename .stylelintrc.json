@@ -1,0 +1,89 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-selector-bem-pattern", "stylelint-order"],
+  "rules": {
+    "plugin/selector-bem-pattern": {
+      "componentName": "^[a-z]+(?:-[a-z]+)*$",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:__[a-z]+(?:-[a-z]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?$"
+      },
+      "utilitySelectors": "^\\.u-[a-z]+(?:-[a-z]+)*$",
+      "ignoreSelectors": ["^\\*", "^&"]
+    },
+    "selector-class-pattern": [
+      "^(?:o|c|u)-[a-z]+(?:-[a-z]+)*(?:__[a-z]+(?:-[a-z]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Les classes han de seguir BEM amb prefix ITCSS: .c-bloc__element--modificador (o-, c- o u-)"
+      }
+    ],
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": true,
+    "selector-max-compound-selectors": 3,
+    "max-nesting-depth": [
+      3,
+      { "ignoreAtRules": ["media", "include"] }
+    ],
+    "declaration-no-important": true,
+    "color-named": "never",
+    "length-zero-no-unit": true,
+    "scss/at-function-pattern": "^[a-z]+(?:-[a-z]+)*$",
+    "scss/at-mixin-pattern": "^[a-z]+(?:-[a-z]+)*$",
+    "scss/dollar-variable-pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    "scss/at-use-no-unnamespaced": true,
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      { "type": "at-rule", "name": "include", "hasBlock": false },
+      "declarations",
+      { "type": "rule", "selector": "^&::?[a-z]" },
+      { "type": "at-rule", "name": "include", "hasBlock": true },
+      { "type": "at-rule", "name": "media" },
+      "rules"
+    ],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "posicionament",
+          "properties": ["content", "position", "inset", "top", "right", "bottom", "left", "z-index"]
+        },
+        {
+          "groupName": "model de caixa",
+          "properties": [
+            "display", "flex", "flex-basis", "flex-direction", "flex-wrap", "align-items", "justify-content",
+            "place-items", "gap", "grid-template-columns", "counter-reset", "counter-increment",
+            "overflow", "aspect-ratio", "box-sizing", "width", "max-width", "height", "margin", "margin-inline",
+            "margin-bottom", "padding", "padding-block", "padding-inline", "padding-top", "padding-bottom",
+            "padding-left", "border", "border-top", "border-bottom", "border-left"
+          ]
+        },
+        {
+          "groupName": "tipografia",
+          "properties": [
+            "font", "font-family", "font-size", "font-style", "font-weight", "line-height", "letter-spacing",
+            "text-align", "text-decoration", "text-decoration-thickness", "text-underline-offset",
+            "text-transform", "text-size-adjust", "white-space", "list-style", "color"
+          ]
+        },
+        {
+          "groupName": "aparença",
+          "properties": [
+            "background-color", "background-image", "border-top-color", "border-radius", "box-shadow",
+            "clip-path", "outline", "outline-offset", "cursor", "transition", "scroll-behavior", "scroll-margin-top"
+          ]
+        }
+      ],
+      { "unspecified": "bottomAlphabetical" }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/assets/styles/elements/**/*.scss", "src/assets/styles/generic/**/*.scss"],
+      "rules": { "selector-max-class": 0 }
+    },
+    {
+      "files": ["src/assets/styles/objects/**/*.scss", "src/assets/styles/components/**/*.scss", "src/assets/styles/utilities/**/*.scss"],
+      "rules": { "selector-max-type": 0 }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+/** @define o-grid */
+
+@use "../tools";
+
+.o-grid {
+  display: grid;
+  gap: tools.spacing(4);
+  grid-template-columns: 1fr;
+
+  @include tools.mq("sm") {
+    &--2,
+    &--3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include tools.mq("lg") {
+    &--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

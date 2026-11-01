@@ -1,0 +1,37 @@
+/** @define c-fact-sheet */
+
+@use "../settings";
+@use "../tools";
+
+.c-fact-sheet {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: settings.$white;
+  border-radius: settings.$radius;
+  box-shadow: 0 tools.spacing(1) tools.spacing(3) rgba(settings.$ink, 0.08);
+
+  @include tools.mq("sm") {
+    grid-template-columns: minmax(tools.rem(160px), 1fr) 2fr;
+  }
+
+  &__term,
+  &__value {
+    padding: tools.spacing(3) tools.spacing(4);
+    border-bottom: 1px solid settings.$paper-dark;
+  }
+
+  &__term {
+    padding-bottom: 0;
+    border-bottom: 0;
+    font-size: tools.font-size("sm");
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: settings.$green-700;
+
+    @include tools.mq("sm") {
+      padding-bottom: tools.spacing(3);
+      border-bottom: 1px solid settings.$paper-dark;
+    }
+  }
+}

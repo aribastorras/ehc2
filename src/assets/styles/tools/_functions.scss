@@ -1,0 +1,59 @@
+/**
+ * Funcions pròpies
+ */
+
+@use "sass:color";
+@use "sass:map";
+@use "sass:math";
+@use "../settings";
+
+/// Converteix un valor en px a rem.
+/// @param {Number} $px - Valor en píxels.
+/// @return {Number} Valor en rem.
+@function rem($px) {
+  @return math.div($px, settings.$font-size-base) * 1rem;
+}
+
+/// Retorna un espaiat de l'escala en rem.
+/// @param {Number} $step - Pas de l'escala (0-8).
+@function spacing($step) {
+  @if not map.has-key(settings.$spacing-scale, $step) {
+    @error "El pas d'espaiat `#{$step}` no existeix a $spacing-scale.";
+  }
+
+  @return rem(map.get(settings.$spacing-scale, $step));
+}
+
+/// Retorna una mida de lletra de l'escala en rem.
+/// @param {String} $size - Nom de la mida (sm, base, md, lg, xl, xxl).
+@function font-size($size) {
+  @if not map.has-key(settings.$font-sizes, $size) {
+    @error "La mida de lletra `#{$size}` no existeix a $font-sizes.";
+  }
+
+  @return rem(map.get(settings.$font-sizes, $size));
+}
+
+/// Retorna el z-index d'una capa.
+/// @param {String} $layer - Nom de la capa.
+@function z($layer) {
+  @if not map.has-key(settings.$z-layers, $layer) {
+    @error "La capa `#{$layer}` no existeix a $z-layers.";
+  }
+
+  @return map.get(settings.$z-layers, $layer);
+}
+
+/// Aclareix un color barrejant-lo amb blanc.
+/// @param {Color} $color - Color base.
+/// @param {Number} $amount - Percentatge de blanc.
+@function tint($color, $amount) {
+  @return color.mix(settings.$white, $color, $amount);
+}
+
+/// Enfosqueix un color barrejant-lo amb negre.
+/// @param {Color} $color - Color base.
+/// @param {Number} $amount - Percentatge de negre.
+@function shade($color, $amount) {
+  @return color.mix(settings.$black, $color, $amount);
+}

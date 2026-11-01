@@ -1,0 +1,42 @@
+/** @define c-character-card */
+
+@use "../settings";
+@use "../tools";
+
+.c-character-card {
+  display: flex;
+  flex-direction: column;
+  gap: tools.spacing(2);
+  height: 100%;
+  padding: tools.spacing(4);
+  border-top: 6px solid settings.$green-500;
+  background-color: settings.$white;
+  border-radius: settings.$radius;
+  box-shadow: 0 tools.spacing(1) tools.spacing(3) rgba(settings.$ink, 0.08);
+
+  &--highlight {
+    background-color: tools.tint(settings.$mile-green, 85%);
+    border-top-color: settings.$mile-green;
+  }
+
+  &--villain {
+    border-top-color: settings.$rust;
+  }
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: tools.rem(48px);
+    height: tools.rem(48px);
+    font-size: tools.font-size("md");
+    color: settings.$paper;
+    background-color: settings.$green-700;
+    border-radius: 50%;
+  }
+
+  &__role {
+    font-size: tools.font-size("sm");
+    font-style: italic;
+    color: settings.$steel;
+  }
+}

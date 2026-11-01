@@ -1,0 +1,45 @@
+/** @define c-section */
+
+@use "../settings";
+@use "../tools";
+
+.c-section {
+  padding-block: tools.spacing(7);
+  scroll-margin-top: tools.spacing(7);
+
+  @include tools.mq("md") {
+    padding-block: tools.spacing(8);
+  }
+
+  &--alt {
+    background-color: settings.$paper-dark;
+  }
+
+  &--dark {
+    color: settings.$paper;
+    background-color: settings.$green-900;
+  }
+
+  &__header {
+    margin-bottom: tools.spacing(5);
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: tools.spacing(2);
+    margin-bottom: tools.spacing(2);
+    font-size: tools.font-size("sm");
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: settings.$rust;
+
+    &--light {
+      color: settings.$mile-green;
+    }
+  }
+
+  &__text {
+    max-width: 65ch;
+  }
+}

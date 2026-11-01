@@ -1,0 +1,24 @@
+/**
+ * Mixins
+ */
+
+@use "sass:map";
+@use "../settings";
+
+/// Media query mobile first.
+/// @param {String} $breakpoint - Nom del punt de ruptura (sm, md, lg).
+@mixin mq($breakpoint) {
+  @if not map.has-key(settings.$breakpoints, $breakpoint) {
+    @error "El punt de ruptura `#{$breakpoint}` no existeix a $breakpoints.";
+  }
+
+  @media (min-width: map.get(settings.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+/// Focus visible i accessible.
+@mixin focus-ring($color: settings.$mile-green) {
+  outline: 3px solid $color;
+  outline-offset: 3px;
+}

@@ -1,0 +1,19 @@
+/** @define o-container */
+
+@use "../settings";
+@use "../tools";
+
+.o-container {
+  width: 100%;
+  max-width: settings.$container-max-width;
+  margin-inline: auto;
+  padding-inline: tools.spacing(3);
+
+  @include tools.mq("md") {
+    padding-inline: tools.spacing(5);
+  }
+
+  &--narrow {
+    max-width: tools.rem(760px);
+  }
+}

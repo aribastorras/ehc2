@@ -1,0 +1,17 @@
+/**
+ * Escala d'espaiats (en px; es converteixen a rem amb la funció spacing())
+ */
+
+$spacing-scale: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 16px,
+  4: 24px,
+  5: 32px,
+  6: 48px,
+  7: 64px,
+  8: 96px,
+);
+$container-max-width: 1120px;
+$radius: 6px;

@@ -1,0 +1,13 @@
+/** @define o-stack */
+
+@use "../tools";
+
+.o-stack {
+  display: flex;
+  flex-direction: column;
+  gap: tools.spacing(3);
+
+  &--loose {
+    gap: tools.spacing(5);
+  }
+}

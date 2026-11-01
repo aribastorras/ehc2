@@ -1,0 +1,32 @@
+/** @define c-site-footer */
+
+@use "../settings";
+@use "../tools";
+
+.c-site-footer {
+  padding-block: tools.spacing(6);
+  font-size: tools.font-size("sm");
+  color: tools.tint(settings.$green-900, 75%);
+  background-color: tools.shade(settings.$green-900, 30%);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: tools.spacing(4);
+    text-align: center;
+
+    @include tools.mq("md") {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    width: tools.rem(160px);
+    padding: tools.spacing(2);
+    background-color: settings.$white;
+    border-radius: settings.$radius;
+  }
+}

@@ -1,0 +1,17 @@
+/**
+ * Tipografia
+ */
+
+$font-family-body: "Lora", "Georgia", "Times New Roman", serif;
+$font-family-display: "Special Elite", "Courier New", monospace;
+$font-size-base: 16px;
+$font-sizes: (
+  "sm": 14px,
+  "base": 16px,
+  "md": 20px,
+  "lg": 28px,
+  "xl": 40px,
+  "xxl": 64px,
+);
+$line-height-base: 1.6;
+$line-height-tight: 1.2;

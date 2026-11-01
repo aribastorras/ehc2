@@ -1,0 +1,18 @@
+@use "../settings";
+@use "../tools";
+
+body {
+  font-family: settings.$font-family-body;
+  font-size: tools.font-size("base");
+  line-height: settings.$line-height-base;
+  color: settings.$ink;
+  background-color: settings.$paper;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}

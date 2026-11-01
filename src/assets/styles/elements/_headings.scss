@@ -1,0 +1,22 @@
+@use "../settings";
+@use "../tools";
+
+h1,
+h2,
+h3 {
+  font-family: settings.$font-family-display;
+  font-weight: 400;
+  line-height: settings.$line-height-tight;
+}
+
+h2 {
+  font-size: tools.font-size("lg");
+
+  @include tools.mq("md") {
+    font-size: tools.font-size("xl");
+  }
+}
+
+h3 {
+  font-size: tools.font-size("md");
+}
